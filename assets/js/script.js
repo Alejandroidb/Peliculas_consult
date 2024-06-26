@@ -6,7 +6,7 @@ $(document).ready(function() {
   let details2 = $('#detalles2');
   let listaPelicula = []; // Variable global para almacenar la lista de películas
 
-  const movieObtain = async () => {
+  const obtenerPelicula = async () => {
     try {
       const response = await fetch('https://www.codigo-alfa.cl/aglo/tester/listasPeliculas');
       const peliculasList = await response.json();
@@ -57,6 +57,6 @@ $(document).ready(function() {
   btnRandom.on('click', mostrarPeliculaRandom);
 
   // Manejo básico de errores en la solicitud fetch
-  movieObtain();
+  obtenerPelicula();
 
 });
